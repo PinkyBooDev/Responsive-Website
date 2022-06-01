@@ -1,0 +1,609 @@
+:root {
+    /* Fonts Variables */
+	--fontDm:'DM Sans', sans-serif;
+	--fontInter:'Inter', sans-serif;
+    /* Color variables */
+    --bitcoinOrange: #F7931A;
+    --softOrange: #FFE9D5;
+    --secondaryBlue: #1A9AF7;
+    --softBlue: #E7F5FF;
+    --warmBlack: #201E1C;
+    --black: #282623;
+    --gray: #BABABA;
+    --grey: #B5B0AC;
+    --offWhite: #FAF8F7;
+    --just-white: #fff;
+}
+
+/* Model Box */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: var(--fontDm);
+    scroll-behavior: smooth;
+}
+
+/* Header Page */
+header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    min-width: 32rem;
+    height: 33.4rem;
+    background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%);
+}
+
+header img {
+    width: 15rem;
+    height: 2.4rem;
+    margin-top: 6rem;
+    align-self: center;
+}
+
+.titleContainer {
+    width: 90%;
+    height: 21.8rem;
+    min-width: 28.8rem;
+    max-width: 90rem;
+    margin-top: 4rem;
+    text-align: center;
+    align-self: center;
+}
+
+.titleContainer h1 {
+    color: var(--just-white);
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+}
+
+.titleContainer p {
+    margin-top: 2.5rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: var(--softOrange);
+}
+
+.titleContainer .headerButton {
+    display: block;
+    position: absolute;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--black);
+    top: 27rem;
+    left: calc(50% - 11.8rem);
+    margin-top: 3.5rem;
+    padding: 1.5rem;
+    width: 22.9rem;
+    height: 4.8rem;
+    background-color: var(--offWhite);
+
+    /* Border */
+    box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.headerButton span {
+    display: inline-block;
+    width: 1.3rem;
+    height: 0.8rem;
+    margin-left: 1rem;
+    background-image: url('../assets/icons/down-arrow.svg');
+}
+
+/* Main Section */
+main {
+    width: 100%;
+    height: auto;
+    background-color: var(--offWhite);
+}
+
+.exchangeContainer {
+    width: 100%;
+    height: auto;
+    padding-top: 8rem;
+    padding-bottom: 3rem;
+    text-align: center;
+}
+
+.exchangeTitle {
+    width: 90%;
+    min-width: 28.8rem;
+    max-width: 90rem;
+    margin: 0 auto;
+}
+
+.exchangeContainer .backgroundImg {
+    width: 20rem;
+    height: 20rem;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+    background-image: url('../assets/img/Bitcoin.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.exchangeContainer h2 {
+    margin-bottom: 3rem;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--black);
+}
+
+.exchangeContainer p {
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.6rem;
+    color: #757575;
+}
+
+/* Table */
+
+.mainTableContainer::-webkit-scrollbar {
+    background-color: var(--softOrange);
+    height: 3px;
+  }
+
+.mainTableContainer::-webkit-scrollbar-thumb {
+    background-color: var(--bitcoinOrange);
+  }
+
+.mainTableContainer {
+    display: flex;
+    height: 40rem;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+
+.mainCurrencyTable {
+    scroll-snap-align: center;
+    width: 70%;
+    margin: 5rem 2rem;
+    min-width: 23.5rem;
+    max-width: 50rem;
+    font-family: var(--fontInter);
+}
+
+#commissions {
+    color: var(--secondaryBlue);
+}
+
+#commissionsUpdate {
+    background-color: var(--softBlue);
+}
+
+.mainCurrencyTable .tableTitle {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 2.3rem;
+    color: var(--bitcoinOrange);
+}
+
+.currencyTableContainer {
+    width: 90%;
+    min-width: 23rem;
+    max-width: 30rem;
+    margin: 0 auto;
+    height: 25rem;
+}
+
+.currencyTableContainer table {
+    width: 100%;
+    height: 100%;
+}
+
+.currencyTableContainer td {
+    width: 50%;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.9rem;
+    color: var(--grey);
+    background-color: var(--just-white);
+}
+
+.currencyTableContainer .tableTopLeft {
+    border-radius: 1.5rem 0 0 0;
+}
+
+.currencyTableContainer .tableTopRight {
+    border-radius: 0 1.5rem 0 0;
+}
+
+.currencyTableContainer .tableBottomLeft {
+    border-radius: 0 0 0 1.5rem;
+}
+
+.currencyTableContainer .tableBottomRight {
+    border-radius: 0 0 1.5rem 0;
+}
+
+.currencyTableContainer .tableRight {
+    font-size: 1.4rem;
+    font-weight: normal;
+    line-height: 1.7rem;
+    color: #757575;
+}
+
+.currencyTableContainer .trendingDown {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 1rem;
+    background-image: url('../assets/icons/trending-down.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.currencyTableContainer .trendingUp {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 1rem;
+    background-image: url('../assets/icons/trending-up.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.currencyUpdate {
+    width: 19rem;
+    height: 3rem;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+    padding: 0.8rem;
+    background-color: var(--softOrange);
+    border-radius: 0.8rem;
+}
+
+.currencyUpdate p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.5rem;
+    color: var(--warmBlack);
+}
+
+/* Product Detail */
+.productDetail {
+    position: relative;
+    width: 100%;
+    min-width: 32rem;
+    height: auto;
+    padding: 2rem 1rem;
+    background-color: var(--warmBlack);
+}
+
+.batataLogo {
+    position: absolute;
+    top: -1rem;
+    left: calc(50% - 2rem);
+    width: 4rem;
+    height: 2.5rem;
+    background-image: url('../assets/icons/batata.svg');
+}
+
+.productDetailTitle {
+    width: 90%;
+    min-width: 28.8rem;
+    max-width: auto;
+    margin: 0 auto;
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.productDetailTitle h2 {
+    margin-bottom: 2rem;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--just-white);
+}
+
+.productDetailTitle p{
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #808080;
+}
+
+/* Cards */
+.cardsDetail {
+    width: 90%;
+    min-width: 28.8rem;
+    max-width: 40rem;
+    min-height: 15rem;
+    height: 15rem;
+    margin: 1.5rem auto;
+    padding: 1.5rem;
+    background-color: var(--black);
+    border-radius: 0.5rem;
+    box-shadow: 0 0.4rem 0.8rem rgba(0, 0 , 0, 0.16, green, blue, alpha);
+}
+
+.cardsDetail span {
+    position: relative;
+    top: 1.3rem;
+    margin-right: 0.5rem;
+}
+
+.cardsDetail .clock {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: 1rem;
+    background-image: url('../assets/icons/clock.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cardsDetail .eye {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: 1rem;
+    background-image: url('../assets/icons/eye.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cardsDetail .dollarSign {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: 1rem;
+    background-image: url('../assets/icons/dollar-sign.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cardsDetail .checkCircle {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: 1rem;
+    background-image: url('../assets/icons/check-circle.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cardTitle {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    color: var(--just-white);
+}
+
+.cardBody {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #808080;
+}
+
+/* wildcard */
+.bitcoinContainer {
+    width: 100%;
+    min-width: 32rem;
+    height: 60vh;
+    background-image: url('../assets/img/bitcoinbaby2x.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.bitcoinContainer h2{
+    color: var(--just-white);
+    padding-top: 6rem;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+}
+
+/* Plans Section */
+.planSlider::-webkit-scrollbar {
+    background-color: var(--softOrange);
+    height: 3px;
+  }
+
+.planSlider::-webkit-scrollbar-thumb {
+    background-color: var(--bitcoinOrange);
+  }
+
+.planSlider {
+    display: flex;
+    height: 32rem;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+
+.plansContainer {
+    width: 100%;
+    min-width: 32rem;
+    padding-bottom: 7rem;
+    text-align: center;
+}
+
+.sectionTitle {
+    width: 90%;
+    min-width: 28.8rem;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+}
+
+.sectionTitle h2{
+    padding-top: 5rem;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--black);
+}
+
+.sectionTitle p{
+    padding-top: 3rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #757575;
+}
+
+.plansCard{
+    position: relative;
+    scroll-snap-align: center;
+    width: 70%;
+    min-width: 19rem;
+    max-width: 30rem;
+    height: 25rem;
+    margin: 5rem 0.5rem 0;
+    padding: 0 1.5rem;
+    background-color: var(--just-white);
+    border-radius: 1.5rem;
+    box-shadow: 0 0.4rem 0.8rem rgba(89, 73, 30, 0.16);
+}
+
+.recommendedPlan{
+    position: absolute;
+    left: calc(50% - 6rem);
+    top: -1.5rem;
+    width: 12rem;
+    height: 3.1rem;
+    background-color: var(--bitcoinOrange);
+    border-radius: 0.8rem;
+    color: var(--just-white);
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 0.6rem;
+}
+
+.planTitle{
+    padding-top: 3rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: black;
+}
+
+.planPrice {
+    padding: 0.5rem 0;
+    font-size: 5.2rem;
+    font-weight: bold;
+    line-height: 5rem;
+    color: black;
+    letter-spacing: -6px;
+}
+
+.planPrice span {
+    position: absolute;
+    left: calc(50% - 8px/2 - 41px);
+    top: calc(50% - 130px/2 + 1px);
+    width: 0.8rem;
+    height: 1.5rem;
+    font-family: var(--fontInter);
+    font-style: normal;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    text-align: center;
+}
+
+.planSaving {
+    color: #757575;
+    font-size: 1.2rem;
+    margin-top: 0.2rem;
+}
+
+.planCA {
+    width: 15rem;
+    height: 4.8rem;
+    margin-top: 2rem;
+    background-color: var(--offWhite);
+    border-radius: 0.4rem;
+    border: var(--bitcoinOrange) 0.2rem solid;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    color: var(--black);
+    font-family: var(--fontDm);
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.planCA:hover {
+    color: var(--offWhite);
+    background-color: var(--bitcoinOrange);
+}
+
+.planCA span {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background-image: url('../assets/icons/orange-right-arrow.svg');
+    vertical-align: text-bottom;
+}
+
+.planCA:hover span {
+    background-image: url('../assets/icons/white-right-arrow.svg');
+}
+
+/* Footer */
+footer {
+    display: flex;
+    width: 100%;
+    height: 15rem;
+    background-color: var(--bitcoinOrange);
+}
+
+footer section {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.listFooter {
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.8rem;
+    list-style: none;
+}
+
+.leftFooter li{
+    margin: 1rem 0;
+}
+
+.leftFooter a {
+    text-decoration: none;
+    color: var(--just-white);
+}
+
+footer a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
